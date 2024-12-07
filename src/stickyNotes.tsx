@@ -14,7 +14,7 @@ export const StickyNotes = () => {
       label: Label.other,
     };
     const [createNote, setCreateNote] = useState(initialNote);
-    const [selectedNote, setSelectedNote] = useState<Note>(initialNote);
+    // const [selectedNote, setSelectedNote] = useState<Note>(initialNote);
   
     const createNoteHandler = (event: React.FormEvent) => {
       event.preventDefault();
