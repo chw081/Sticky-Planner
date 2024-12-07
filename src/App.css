@@ -218,7 +218,7 @@ select {
   background-color: #a69cac; /* Muted lavender */
 }
 
-/* App.css */
+/* To do list style */
 .todo-list-container {
   max-width: 600px;
   margin: 20px auto;
@@ -268,4 +268,41 @@ select {
 
 .todo-item-pending {
   color: #333;
+}
+
+.todo-list-add-item {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-list-new-item-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #a69cac; /* Muted lavender border */
+  border-radius: 5px;
+  background-color: #f4f0fa; /* Pale lavender */
+}
+
+.todo-list-new-item-input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.todo-list-add-button {
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #c3b8c6; /* Soft lilac */
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.todo-list-add-button:hover {
+  background-color: #a69cac; /* Muted lavender */
 }
