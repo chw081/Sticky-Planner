@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with JavaScript Inputs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label,
+        input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Create Your Sticky Note!</h2>
+        <form id="userForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="content">Content:</label>
+            <input type="text" id="content" name="content" required>
+            <label for="lyn">Label Your Note:</label>
+            <select id="label" name="label">
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+                <option value="study">Study</option>
+                <option value="event">Event</option>
+                <option value="">--Please choose an option--</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="result" id="result"></div>
+</div>
+
+<script>
+    document.getElementById("title").addEventListener("focus", function () {
+        this.style.backgroundColor = "#e0f7fa";  // Light blue background on focus
+    });
+
+    document.getElementById("title").addEventListener("blur", function () {
+        this.style.backgroundColor = "";  // Reset background on blur
+        if (this.value.length > 50) {
+            alert("Title cannot exceed 50 characters.")
+        }
+    });
+
+    document.getElementById("content").addEventListener("focus", function () {
+        this.style.backgroundColor = "#e0f7fa";  // Light blue background on focus
+    });
+
+    document.getElementById("content").addEventListener("blur", function () {
+        this.style.backgroundColor = "";  // Reset background on blur
+    });
+
+    document.getElementById("userForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Get the input values
+        const title = document.getElementById("title").value;
+        const content = document.getElementById("content").value;
+        const label = document.getElementById("label").value;
+
+        // Display the result
+        const resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = `<h3>Submitted Information</h3>
+        <p>Title: ${title}</p>
+        <p>Content: ${content}</p>
+        <p>Label: ${label}</p>`;
+       });
+   </script>
+</body>
+
+</html>

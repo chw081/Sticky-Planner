@@ -1,0 +1,271 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 20px;
+  background-color: #f0ebe4; /* Soft cream */
+  font-family: 'Georgia', serif; /* Serif font for elegance */
+  color: #4d4d4d; /* Neutral dark gray */
+}
+
+.app-container {
+  margin: 20px auto;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .app-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+  }
+}
+
+/* Navbar container styling */
+.navbar-container {
+  background-color: #a69cac; /* Muted lavender */
+  padding: 10px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Link styling */
+.nav-link {
+  text-decoration: none;
+  color: #f0ebe4; /* Soft cream text */
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Hover effect for links */
+.nav-link:hover {
+  color: #a69cac; /* Muted lavender text */
+  background-color: #f0ebe4; /* Soft cream background */
+}
+
+/* Active link styling */
+.active-link {
+  font-weight: bold;
+  color: #f0ebe4; /* Soft cream */
+  border-bottom: 2px solid #c3b8c6;
+}
+
+/* Notes Grid */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(250px, auto);
+  gap: 20px;
+}
+
+/* Note Item */
+.note-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d3cec4;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f7f4f0; /* Light cream */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.notes-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.notes-header button {
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  max-width: fit-content;
+  color: #a69cac; /* Muted lavender */
+}
+
+.notes-header button:hover {
+  color: #c3b8c6; /* Soft lilac */
+}
+
+h2 {
+  margin: 0;
+  color: #a69cac; /* Muted lavender */
+}
+
+/* Note Form */
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.note-form textarea,
+.note-form input {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #a69cac; /* Muted lavender border */
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f7f4f0; /* Light cream */
+}
+
+select {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #a69cac; /* Muted lavender */
+  background-color: #f7f4f0; /* Light cream */
+  padding: 10px;
+}
+
+.note-form button {
+  border-radius: 5px;
+  background-color: #c3b8c6; /* Soft lilac */
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.note-form button:hover {
+  background-color: #a69cac; /* Muted lavender */
+  cursor: pointer;
+}
+
+.edit-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+
+.edit-buttons button {
+  flex: 1;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+}
+
+.edit-buttons button:first-of-type {
+  background-color: #c3b8c6; /* Soft lilac */
+}
+
+.edit-buttons button:last-of-type {
+  background-color: #d8a49c; /* Muted terracotta */
+}
+
+/* ToggleTheme Component */
+.toggle-theme {
+  text-align: center;
+}
+
+.toggle-button {
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #a69cac; /* Muted lavender border */
+  margin-bottom: 20px;
+  background-color: #c3b8c6; /* Soft lilac */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: #a69cac; /* Muted lavender */
+}
+
+/* ClickCounter Component */
+.click-counter {
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px 0px;
+  color: #4d4d4d; /* Neutral dark gray */
+}
+
+.click-counter p {
+  margin-bottom: 20px;
+}
+
+.click-button {
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #a69cac; /* Muted lavender border */
+  background-color: #c3b8c6; /* Soft lilac */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.click-button:hover {
+  background-color: #a69cac; /* Muted lavender */
+}
+
+/* App.css */
+.todo-list-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.todo-list-body {
+  text-align: center;
+}
+
+.todo-list-body h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.todo-list-summary {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.todo-list-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.todo-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-list-checkbox {
+  cursor: pointer;
+}
+
+.todo-item-purchased {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.todo-item-pending {
+  color: #333;
+}
