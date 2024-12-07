@@ -1,7 +1,6 @@
 {
-    "builds": [{ "src": "package.json", "use": "@vercel/static-build" }],
     "rewrites": [
-      { "source": "/todolist/:name", "destination": "/" }
+        { "source": "/(.*)", "destination": "/" }
     ]
-  }
+}
   
